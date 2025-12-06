@@ -6,8 +6,8 @@
     <title>ANP Network - 智能体互联网时代的HTTP</title>
     <!-- 引入Tailwind CSS CDN（简化上线） -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入Font Awesome 4.7 稳定CDN（确保图标兼容） -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 引入Font Awesome 4.7 稳定CDN（国内源） -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- 自定义样式 -->
     <style type="text/tailwindcss">
         @layer utilities {
@@ -24,10 +24,15 @@
                 transform: translateY(-5px);
                 box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
             }
-            /* 强制图标显示样式，避免被覆盖 */
+            /* 强制图标显示样式，提升优先级 */
             .fa-icon-fix {
                 display: inline-block !important;
                 visibility: visible !important;
+                font-family: 'FontAwesome' !important;
+                font-style: normal !important;
+                font-weight: normal !important;
+                line-height: 1 !important;
+                text-decoration: inherit !important;
             }
         }
     </style>
@@ -72,7 +77,7 @@
                 </div>
                 <!-- 移动端菜单按钮 -->
                 <button class="md:hidden text-gray-700 focus:outline-none" id="menu-btn">
-                    <i class="fa fa-bars text-xl"></i>
+                    <i class="fa fa-bars text-xl fa-icon-fix"></i>
                 </button>
             </div>
         </div>
@@ -99,7 +104,7 @@
                     构建去中心化的智能体直连网络，打破平台垄断，重构消费端与产业端的价值链路
                 </p>
                 <a href="#about" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors">
-                    了解更多 <i class="fa fa-arrow-down ml-2"></i>
+                    了解更多 <i class="fa fa-arrow-down ml-2 fa-icon-fix"></i>
                 </a>
             </div>
         </div>
@@ -228,13 +233,13 @@
                 </div>
             </div>
 
-            <!-- 创新特性 -->
+            <!-- 创新特性（核心替换：灯泡图标） -->
             <div class="max-w-4xl mx-auto">
                 <h3 class="text-2xl font-semibold mb-6 text-center">核心创新特性</h3>
                 <div class="grid md:grid-cols-3 gap-6">
+                    <!-- AI原生设计：替换为fa-lightbulb-o（灯泡，贴合智能/创意语义） -->
                     <div class="flex flex-col items-center text-center p-4">
-                        <!-- 修复：使用FA4.7兼容的机器人图标 + 强制显示样式 -->
-                        <i class="fa fa-robot text-4xl text-blue-800 mb-3 fa-icon-fix" aria-hidden="true"></i>
+                        <i class="fa fa-lightbulb-o text-4xl text-blue-800 mb-3 fa-icon-fix" style="font-family: 'FontAwesome' !important; display: inline-block !important;" aria-hidden="true"></i>
                         <p class="font-medium mb-2">AI原生设计</p>
                         <p class="text-gray-600 text-sm">专为智能体间通信定制，非人机交互</p>
                     </div>
@@ -271,7 +276,6 @@
                             <p>全球70亿人口，未来每人将拥有至少一个智能体助手</p>
                         </li>
                         <li class="flex items-center">
-                            <!-- 修复：替换为FA4.7兼容的网络图标（fa-sitemap） -->
                             <i class="fa fa-sitemap text-blue-800 mr-3 fa-icon-fix" aria-hidden="true"></i>
                             <p>智能体间协作将成为主流，数十亿智能体需要高效通信基础设施</p>
                         </li>
@@ -315,13 +319,11 @@
                             <p class="text-gray-600 text-sm">智能体交互服务费的一定比例佣金</p>
                         </div>
                         <div class="p-4 border border-gray-200 rounded-lg">
-                            <!-- 修复：替换为FA4.7兼容的货币图标（fa-money） -->
                             <i class="fa fa-money text-blue-800 text-2xl mb-2 fa-icon-fix" aria-hidden="true"></i>
                             <p class="font-medium">生态激励</p>
                             <p class="text-gray-600 text-sm">持有代币参与治理和收益分配</p>
                         </div>
                         <div class="p-4 border border-gray-200 rounded-lg">
-                            <!-- 修复：替换为FA4.7正确类名（fa-line-chart，不是fa-chart-line） -->
                             <i class="fa fa-line-chart text-blue-800 text-2xl mb-2 fa-icon-fix" aria-hidden="true"></i>
                             <p class="font-medium">增值服务</p>
                             <p class="text-gray-600 text-sm">高级数据分析、安全审计等专业服务</p>
